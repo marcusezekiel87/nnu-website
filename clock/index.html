@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#008753">
+  <meta name="description" content="Digital Clock - Display current time across different time zones">
+  <title>Digital Clock | Time Zone Converter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="clock.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">← Back to NNU</a>
+      <h1>Digital Clock</h1>
+    </div>
+  </nav>
+
+  <div class="container">
+    <section class="hero">
+      <h2>World Clock</h2>
+      <p>Track time across multiple time zones simultaneously</p>
+    </section>
+
+    <section class="controls">
+      <div class="search-box">
+        <input 
+          type="text" 
+          id="timezoneSearch" 
+          placeholder="Search timezone (e.g., New York, Tokyo, London)..."
+          aria-label="Search timezones"
+        >
+        <button id="addTimezonBtn" aria-label="Add timezone to display">+ Add Timezone</button>
+      </div>
+      <div class="preset-buttons">
+        <button class="preset-btn" data-timezone="America/New_York">New York</button>
+        <button class="preset-btn" data-timezone="Europe/London">London</button>
+        <button class="preset-btn" data-timezone="Asia/Tokyo">Tokyo</button>
+        <button class="preset-btn" data-timezone="Australia/Sydney">Sydney</button>
+        <button class="preset-btn" data-timezone="Asia/Dubai">Dubai</button>
+        <button class="preset-btn" data-timezone="Asia/Singapore">Singapore</button>
+      </div>
+    </section>
+
+    <section class="clocks-grid" id="clocksGrid"></section>
+
+    <section class="info-section">
+      <h3>Available Timezones</h3>
+      <div class="timezone-list" id="timezoneList"></div>
+    </section>
+  </div>
+
+  <script src="clock.js"></script>
+</body>
+</html>
